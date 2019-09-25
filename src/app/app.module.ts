@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovementsPieComponent } from './movements-pie/movements-pie.component';
 import { ChartsModule } from 'ng2-charts';
+import {MatButtonModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ChartsModule
+    ChartsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
