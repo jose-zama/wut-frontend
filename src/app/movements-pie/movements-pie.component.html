@@ -1,5 +1,10 @@
 <div >
-  <input mat-button>Load movements >
+  <input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+<button (click)="onUpload()">Upload!</button>
 </div>
 <div style="display: block;">
   <canvas baseChart
