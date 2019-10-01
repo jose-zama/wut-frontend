@@ -7,14 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovementsPieComponent } from './movements-pie/movements-pie.component';
 import { ChartsModule } from 'ng2-charts';
 import {MatButtonModule} from '@angular/material';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovementsPieComponent
+    MovementsPieComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ChartsModule,
