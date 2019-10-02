@@ -23,7 +23,7 @@ export class MovementsPieComponent implements OnInit {
   public doughnutChartType: ChartType = 'doughnut';
   private donutColors = [
     {
-      backgroundColor: ['#ced','#fda','#fdd','#86c7f3','#ffe199', '#ffe100', '#00e199', "red", "blue", "green"]
+      backgroundColor: ['#ced','#fda','#fdd','#86c7f3','#ffe199', '#4f5bd5', '#962fbf', "#d62976", "#fa7e1e", "#feda75"]
     }
   ];
 
@@ -105,6 +105,8 @@ export class MovementsPieComponent implements OnInit {
         this.doughnutChartLabels = Object.keys(groupbyType);
         this.doughnutChartData = Object.keys(groupbyType)
           .map(x => groupbyType[x].percentage);
+          document.getElementById("movements-text").innerHTML = "<p> " + records.toString + "</p>";
+          console.log(records);
       });
     };
     fileReader.onerror = (error) => {
