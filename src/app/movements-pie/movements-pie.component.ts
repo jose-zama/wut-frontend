@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ChartType} from 'chart.js';
-import {Label, MultiDataSet, SingleDataSet} from 'ng2-charts';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { ChartType } from 'chart.js';
+import { Label, MultiDataSet, SingleDataSet } from 'ng2-charts';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-movements-pie',
@@ -14,12 +14,18 @@ export class MovementsPieComponent implements OnInit {
   }
 
   // Doughnut
-  public doughnutColors: any[] = [
-    {backgroundColor: ['#86c7f3', '#ffe199', '#ffe100', '#00e199']},
-    {borderColor: ['#AEEBF2', '#FEFFC9']}];
-  public doughnutChartLabels: Label[] = ['Entertainment', 'Food & Dining', 'Transport'];
-  public doughnutChartData: SingleDataSet = [350, 450, 200];
+
+  // public doughnutColors: any[] = [
+  //   {backgroundColor: ['#86c7f3', '#ffe199', '#ffe100', '#00e199']},
+  //   {borderColor: ['#AEEBF2', '#FEFFC9']}];
+  public doughnutChartLabels: Label[] = ['Entertainment', 'Food & Dining', 'Transport', 'loco'];
+  public doughnutChartData: SingleDataSet = [350, 450, 200, 900];
   public doughnutChartType: ChartType = 'doughnut';
+  private donutColors = [
+    {
+      backgroundColor: ['#ced','#fda','#fdd','#86c7f3','#ffe199', '#ffe100', '#00e199', "red", "blue", "green"]
+    }
+  ];
 
   // File
   selectedFile: File;
