@@ -31,6 +31,7 @@ export class MovementsPieComponent implements OnInit {
       }),
       responseType: 'text'
     };
+    // @ts-ignore
     return this.http.post('https://tjtu7umsk6.execute-api.us-east-1.amazonaws.com/prototype/classify', '', httpOptions);
   }
 
